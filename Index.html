@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dash KA · Target Comercial 99</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--y:#FFDC00;--o:#FF8200;--k:#1D1D1D;--bg:#F4F4F2;--card:#fff;--tx:#1D1D1D;--mu:#6b6b66;--bd:#e4e4df;--ok:#1e8a4c;--bad:#d93025;--hd:#FFDC00;--hdt:#1D1D1D;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#121212;--card:#1e1e1e;--tx:#f2f2ee;--mu:#9a9a94;--bd:#333;--hd:#1D1D1D;--hdt:#FFDC00}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#121212;--card:#1e1e1e;--tx:#f2f2ee;--mu:#9a9a94;--bd:#333;--hd:#1D1D1D;--hdt:#FFDC00}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;font-size:14px}
+header{background:var(--hd);color:var(--hdt);padding:16px 20px 0;border-bottom:4px solid var(--o)}
+.top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:26px;letter-spacing:-1px;display:flex;align-items:center;gap:6px}
+.logo i{display:inline-block;width:24px;height:24px;border-radius:7px;background:var(--o);position:relative}
+.logo i:after{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--hd)}
+h1{font-size:15px;margin:0;font-weight:600;opacity:.85}
+.sp{flex:1}
+input,button{font-family:inherit;font-size:14px}
+.top input[type=date]{padding:6px 8px;border-radius:8px;border:2px solid var(--hdt);background:transparent;color:var(--hdt);font-weight:600}
+.badge{font-size:11px;font-weight:600;padding:4px 10px;border-radius:99px;background:var(--k);color:var(--y)}
+.badge.off{background:var(--bad);color:#fff}
+.tabs{display:flex;gap:4px;margin-top:14px;overflow-x:auto}
+.tab{border:0;background:transparent;color:var(--hdt);padding:10px 16px;font-weight:600;border-radius:12px 12px 0 0;cursor:pointer;white-space:nowrap;opacity:.7}
+.tab.on{background:var(--bg);color:var(--tx);opacity:1}
+main{max-width:1200px;margin:0 auto;padding:18px 16px 60px}
+.pills{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.pill{border:2px solid var(--bd);background:var(--card);color:var(--tx);padding:8px 16px;border-radius:99px;font-weight:600;cursor:pointer}
+.pill.on{background:var(--k);color:var(--y);border-color:var(--k)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:16px}
+.card h3{margin:0 0 4px;font-size:12px;color:var(--mu);text-transform:uppercase;letter-spacing:.6px;font-weight:600}
+.big{font-size:34px;font-weight:800;letter-spacing:-1px}
+.hero{display:flex;gap:22px;align-items:center;flex-wrap:wrap;background:var(--k);color:#fff;border-radius:20px;padding:20px;margin-bottom:14px}
+.hero h2{margin:0;font-size:24px;color:var(--y)}.hero p{margin:4px 0 0;color:#cfcfc8}
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;margin:4px 6px 0 0}
+.c-ok{background:#d9f3e3;color:#14663a}.c-bad{background:#fde1de;color:#a3221a}.c-y{background:var(--y);color:#1D1D1D}
+.bar{height:10px;border-radius:99px;background:var(--bd);overflow:hidden;margin:8px 0 4px}
+.bar b{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--y),var(--o));transition:width .6s}
+.mu{color:var(--mu);font-size:12px}
+.sec{font-weight:800;font-size:16px;margin:22px 0 10px;display:flex;align-items:center;gap:8px}
+.sec:before{content:"";width:6px;height:18px;background:var(--o);border-radius:3px}
+.form{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.form label{font-size:12px;font-weight:600;color:var(--mu);display:block}
+.form input{width:100%;margin-top:4px;padding:10px;border-radius:10px;border:2px solid var(--bd);background:var(--bg);color:var(--tx);font-weight:600}
+.form input:focus{outline:none;border-color:var(--o)}
+.btn{background:var(--y);color:#1D1D1D;border:0;font-weight:800;padding:12px 22px;border-radius:12px;cursor:pointer;margin-top:12px}
+.btn:hover{background:var(--o)}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--bd);white-space:nowrap}
+th{color:var(--mu);font-size:11px;text-transform:uppercase}.scroll{overflow-x:auto}
+a.ed{color:var(--o);font-weight:600;cursor:pointer}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--k);color:var(--y);padding:12px 22px;border-radius:99px;font-weight:600;opacity:0;transition:.3s;pointer-events:none}
+.toast.on{opacity:1}
+svg text{fill:var(--mu);font-size:10px}
+</style>
+</head>
+<body>
+<header>
+ <div class="top"><div class="logo">99<i></i></div><h1>Dash KA · Target Comercial</h1><div class="sp"></div>
+ <span id="st" class="badge">conectando…</span>
+ <input type="date" id="dt" aria-label="Data de referência"></div>
+ <div class="tabs" id="tabs"></div>
+</header>
+<main><div id="pills"></div><div id="stats"></div><div id="formbox"></div><div id="hist"></div></main>
+<div class="toast" id="toast"></div>
+<script>
+const $=s=>document.querySelector(s);
+const fmt=(n,d=0)=>n==null||isNaN(n)?'–':Number(n).toLocaleString('pt-BR',{maximumFractionDigits:d});
+const CH={geral:'Visão geral',hunters:'Hunters',onboarders:'Onboarders',farmers:'Farmers',integradoras:'Integradoras'};
+const PEOPLE=[['fabio','Fábio','hunters'],['guilherme','Guilherme','hunters'],['jordana','Jordana','hunters'],['anna','Anna','hunters'],['flavia','Flávia','onboarders'],['jeff','Jeff','onboarders'],['larissa','Larissa','farmers'],['cleo','Cleo','farmers'],['renan','Renan','farmers'],['beatriz','Beatriz','farmers'],['anaju','Anaju','integradoras']].map(([id,n,ch])=>({id,n,ch}));
+let E={},CFG={},db=null,tab='geral',pid=null,date=new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+const TODAY=date;
+/* metas conforme PDF Target Comercial Nov/2026 */
+function M(p){
+ const h={fabio:[20,20,60,15],guilherme:[25,9,48,12],jordana:[20,5,40,10]}[p.id]||(x=>[x.props,x.contr,x.reun,x.min])((CFG.mt||{})[p.id]||{});
+ const o={flavia:[4,898],jeff:[5,447]}[p.id];
+ const f={larissa:8230,cleo:5010,renan:1666,beatriz:3383}[p.id];
+ const bm=(CFG.bm||{})[p.id];
+ if(p.ch==='hunters')return[
+  {k:'props',l:'Propostas aceitas',u:'pts',w:.3,meta:h[0],t:'sum'},{k:'contr',l:'Contratos assinados',u:'pts',w:.7,meta:h[1],t:'sum'},
+  {k:'reun',l:'Reuniões válidas (mín. '+(h[3]??'?')+'/sem)',u:'',meta:h[2],t:'sum',info:1},
+  {k:'lt',l:'Contratos com leadtime ≥20% menor',pp:5,t:'sum',acc:1},{k:'sem',l:'Semanas abaixo do mín. de reuniões',pp:5,t:'sum',dec:1}];
+ if(p.ch==='onboarders')return[
+  {k:'jbp',l:'Clientes com JBP',u:'contas',w:.4,meta:o[0],t:'sum'},{k:'drr',l:'DRR em Op. Assistida',u:'DRR',w:.6,meta:o[1],t:'last'},
+  {k:'ho',l:'Handover com B-margin positivo',pp:5,t:'sum',acc:1},{k:'sc',l:'Contas em Op. Assistida sem contrato assinado (sim=1)',pp:10,t:'last',dec:1,bin:1}];
+ if(p.ch==='farmers')return[
+  {k:'bm',l:'B-margin da carteira',u:'%',w:.6,meta:bm,t:'last',edit:1},{k:'drr',l:'DRR da carteira',u:'DRR',w:.2,meta:f,t:'last'},{k:'jbp',l:'Contas com JBP',u:'%',w:.2,meta:70,t:'last'},
+  {k:'nps',l:'NPS ≥ 8 com 80% de adesão (sim=1)',pp:10,t:'last',acc:1,bin:1},{k:'sc',l:'Contas ativas sem contrato assinado',pp:10,t:'last',dec:1},{k:'ft',l:'Contas com tabela desajustada/fora do segmento',pp:3,t:'last',dec:1}];
+ return[{k:'contr',l:'Contratos assinados',u:'contratos',w:.6,meta:5,t:'sum'},{k:'rtbo',l:'Integradoras em RTBO',u:'RTBO',w:.4,meta:8,t:'sum'},
+  {k:'lista',l:'Integradoras que disponibilizaram lista',pp:5,t:'sum',acc:1},{k:'kc',l:'Clientes KA/CKA fechados de lista',pp:1,t:'sum',acc:1}];
+}
+const pm=()=>date.slice(0,7);
+const dim=()=>new Date(+date.slice(0,4),+date.slice(5,7),0).getDate();
+const rows=(id,upTo)=>Object.values(E).filter(e=>e.pid===id&&e.date.slice(0,7)===upTo.slice(0,7)&&e.date<=upTo).sort((a,b)=>a.date<b.date?-1:1);
+function val(id,m,upTo){const r=rows(id,upTo);let s=0,l=null;r.forEach(e=>{const v=e.v&&e.v[m.k];if(v!=null&&v!==''){s+=+v;l=+v}});return m.t==='sum'?s:(l==null?0:l)}
+function score(p,upTo){
+ const ms=M(p),mains=ms.filter(m=>m.w&&m.meta);let W=0,A=0;
+ mains.forEach(m=>{W+=m.w;A+=m.w*Math.min(2,val(p.id,m,upTo)/m.meta)});
+ let acc=0,dec=0;ms.forEach(m=>{if(!m.pp)return;let v=val(p.id,m,upTo);if(m.bin)v=Math.min(1,v);(m.acc?acc+=m.pp*v:dec+=m.pp*v)});
+ const gl=CFG.global?20:0;acc=Math.min(20,acc+gl);dec=Math.min(20,dec);
+ const att=W?A/W*100:0;return{att,acc,dec,total:att+acc-dec,ms,ready:W>0}
+}
+const expected=()=>Math.min(100,(+date.slice(8))/dim()*100);
+const stat=s=>s.total>=expected()?['c-ok','No ritmo']:['c-bad','Abaixo do ritmo'];
+function ring(v,sz=120){const r=sz/2-10,c=2*Math.PI*r,p=Math.min(1,v/100);return`<svg width="${sz}" height="${sz}"><circle cx="${sz/2}" cy="${sz/2}" r="${r}" fill="none" stroke="#444" stroke-width="10"/><circle cx="${sz/2}" cy="${sz/2}" r="${r}" fill="none" stroke="#FFDC00" stroke-width="10" stroke-linecap="round" stroke-dasharray="${c*p} ${c}" transform="rotate(-90 ${sz/2} ${sz/2})"/><text x="50%" y="52%" text-anchor="middle" style="fill:#fff;font-size:26px;font-weight:800">${fmt(v)}%</text></svg>`}
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),2200)}
+function renderTabs(){$('#tabs').innerHTML=Object.entries(CH).map(([k,n])=>`<button class="tab ${k===tab?'on':''}" data-t="${k}">${n}</button>`).join('');
+ $('#tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{tab=b.dataset.t;pid=tab==='geral'?null:PEOPLE.find(p=>p.ch===tab).id;renderAll(1)})}
+function renderPills(){if(tab==='geral'){$('#pills').innerHTML='';return}
+ $('#pills').innerHTML='<div class="pills">'+PEOPLE.filter(p=>p.ch===tab).map(p=>`<button class="pill ${p.id===pid?'on':''}" data-p="${p.id}">${p.n}</button>`).join('')+'</div>';
+ $('#pills').querySelectorAll('button').forEach(b=>b.onclick=()=>{pid=b.dataset.p;renderAll(1)})}
+function renderOverview(){
+ const sc=PEOPLE.map(p=>({p,s:score(p,date)}));
+ const missing=PEOPLE.filter(p=>!E[date+'_'+p.id]);
+ let h=`<div class="hero"><div>${ring(sc.filter(x=>x.s.ready).reduce((a,x)=>a+x.s.total,0)/sc.filter(x=>x.s.ready).length)}</div><div><h2>Time KA · ${date.split('-').reverse().join('/')}</h2><p>Atingimento médio ponderado até a data · ritmo esperado hoje: <b>${fmt(expected())}%</b></p>
+ <label style="display:flex;gap:8px;align-items:center;margin-top:10px;color:#fff;cursor:pointer"><input type="checkbox" id="gl" ${CFG.global?'checked':''}> Acelerador global +20 p.p. (B-margin KA/CKA + SMB atingido)</label></div></div>`;
+ h+='<div class="grid">'+['hunters','onboarders','farmers','integradoras'].map(c=>{const l=sc.filter(x=>x.p.ch===c&&x.s.ready),a=l.reduce((s,x)=>s+x.s.total,0)/l.length;return`<div class="card"><h3>${CH[c]}</h3><div class="big">${fmt(a)}%</div><div class="bar"><b style="width:${Math.min(100,a)}%"></b></div></div>`}).join('')+'</div>';
+ $('#stats').innerHTML=h;$('#formbox').innerHTML='';$('#hist').innerHTML='';
+ $('#gl').onchange=e=>saveCfg({global:e.target.checked})}
+function chart(p){
+ const n=dim(),W=640,H=180,pts=[];for(let d=1;d<=+date.slice(8);d++){const ds=pm()+'-'+String(d).padStart(2,'0');pts.push([d,score(p,ds).att])}
+ const mx=Math.max(110,...pts.map(x=>x[1])),X=d=>30+(d-1)/(n-1)*(W-40),Y=v=>H-20-v/mx*(H-40);
+ const line=pts.map((q,i)=>(i?'L':'M')+X(q[0])+' '+Y(q[1])).join(' ');
+ return`<svg viewBox="0 0 ${W} ${H}" style="width:100%"><line x1="30" y1="${Y(0)}" x2="${W-10}" y2="${Y(100)}" stroke="#999" stroke-dasharray="4 4"/><line x1="30" y1="${Y(100)}" x2="${W-10}" y2="${Y(100)}" stroke="#FF8200" stroke-opacity=".5"/><text x="2" y="${Y(100)+3}">100%</text><text x="30" y="${H-4}">dia 1</text><text x="${W-40}" y="${H-4}">dia ${n}</text>${pts.length>1?`<path d="${line} L${X(pts.at(-1)[0])} ${Y(0)} L${X(1)} ${Y(0)}Z" fill="#FFDC00" fill-opacity=".25"/><path d="${line}" fill="none" stroke="#FF8200" stroke-width="3"/>`:''}${pts.map(q=>`<circle cx="${X(q[0])}" cy="${Y(q[1])}" r="3.5" fill="#FFDC00" stroke="#1D1D1D"/>`).join('')}</svg><div class="mu">Linha tracejada = ritmo linear esperado · curva = atingimento acumulado</div>`}
+function renderPerson(){
+ const p=PEOPLE.find(x=>x.id===pid),s=score(p,date),[c,t]=stat(s);
+ let h=`<div class="hero"><div>${ring(s.total)}</div><div><h2>${p.n} · ${CH[p.ch]}</h2><p>Atingimento ${fmt(s.att)}% ${s.acc?`+ ${fmt(s.acc)}pp acelerador `:''}${s.dec?`− ${fmt(s.dec)}pp desacelerador`:''}</p>${s.ready?'':'<span class="chip c-y">Defina as metas abaixo</span>'}</div></div><div class="grid">`;
+ s.ms.filter(m=>!m.pp).forEach(m=>{const v=val(p.id,m,date),pc=m.meta?v/m.meta*100:0;h+=`<div class="card"><h3>${m.l}${m.w?' · peso '+m.w*100+'%':''}</h3><div class="big">${fmt(v,1)}<span class="mu"> / ${m.meta!=null?fmt(m.meta):'?'} ${m.u}</span></div><div class="bar"><b style="width:${Math.min(100,pc)}%"></b></div><div class="mu">${fmt(pc)}% da meta${pc>100?' (teto 200%)':''}</div></div>`});
+ s.ms.filter(m=>m.pp).forEach(m=>{const v=val(p.id,m,date);h+=`<div class="card"><h3>${m.acc?'🚀 Acelerador':'🛑 Desacelerador'}</h3><div style="font-weight:600">${m.l}</div><div class="big" style="color:${m.acc?'var(--ok)':'var(--bad)'}">${fmt(v)}<span class="mu"> × ${m.acc?'+':'−'}${m.pp}pp</span></div></div>`});
+ h+=`</div><div class="sec">Evolução diária</div><div class="card">${chart(p)}</div>`;
+ $('#stats').innerHTML=h;
+ const hr=rows(pid,date).slice().reverse();
+ $('#hist').innerHTML=`<div class="sec">Histórico salvo</div><div class="card scroll"><table><tr><th>Data</th>${s.ms.map(m=>`<th>${m.l.slice(0,22)}</th>`).join('')}<th></th></tr>`+(hr.map(e=>`<tr><td><b>${e.date.split('-').reverse().join('/')}</b></td>${s.ms.map(m=>`<td>${e.v&&e.v[m.k]!=null?fmt(e.v[m.k],1):'–'}</td>`).join('')}<td><a class="ed" data-d="${e.date}">editar</a></td></tr>`).join('')||'<tr><td>Nenhum lançamento no mês</td></tr>')+'</table></div>';
+ $('#hist').querySelectorAll('.ed').forEach(a=>a.onclick=()=>{date=a.dataset.d;$('#dt').value=date;renderAll(1);scrollTo({top:0,behavior:'smooth'})})}
+function renderForm(){
+ const p=PEOPLE.find(x=>x.id===pid),ms=M(p),cur=(E[date+'_'+pid]||{}).v||{};
+ $('#formbox').innerHTML=`<div class="sec">Lançar resultado de ${date.split('-').reverse().join('/')}</div><div class="card"><div class="mu" style="margin-bottom:10px">Campos somados no mês: informe o <b>valor do dia</b>. Campos de estado (DRR, B-margin, %, contas): informe o <b>valor atual acumulado</b>.</div><div class="form">`+
+ ms.map(m=>`<label>${m.l} <span style="color:var(--o)">${m.t==='sum'?'(valor do dia)':'(valor atual)'}</span><input type="number" step="any" data-k="${m.k}" value="${cur[m.k]??''}" placeholder="0"></label>`).join('')+
+ (ms.some(m=>m.edit)?`<label>Meta B-margin (%) <input type="number" step="any" id="bmm" value="${(CFG.bm||{})[pid]??''}" placeholder="definir meta"></label>`:'')+
+ (pid==='anna'?[['props','Meta propostas aceitas (pts)'],['contr','Meta contratos assinados (pts)'],['reun','Meta reuniões/mês'],['min','Mín. reuniões/semana']].map(([k,l])=>`<label>${l}<input type="number" step="any" data-mt="${k}" value="${((CFG.mt||{}).anna||{})[k]??''}" placeholder="definir meta"></label>`).join(''):'')+`</div><button class="btn" id="sv">Salvar lançamento do dia</button></div>`;
+ $('#sv').onclick=async()=>{const v={};document.querySelectorAll('#formbox [data-k]').forEach(i=>{if(i.value!=='')v[i.dataset.k]=+i.value});
+  const mts=document.querySelectorAll('#formbox [data-mt]');if(mts.length){const o={};mts.forEach(i=>{if(i.value!=='')o[i.dataset.mt]=+i.value});await saveCfg({mt:{...(CFG.mt||{}),[pid]:o}})}const bm=$('#bmm');if(bm&&bm.value!==''&&+bm.value!==(CFG.bm||{})[pid])await saveCfg({bm:{...(CFG.bm||{}),[pid]:+bm.value}});
+  await save(date+'_'+pid,{pid,date,v,t:Date.now()});toast('✔ Salvo!')}}
+function renderAll(form){renderTabs();renderPills();if(tab==='geral')renderOverview();else{if(!pid)pid=PEOPLE.find(p=>p.ch===tab).id;renderPerson();if(form||!$('#formbox').innerHTML)renderForm()}}
+/* persistência: db compartilhado (padrão) ou localStorage (fallback) */
+const LS=k=>{try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}};
+async function save(id,d){E[id]=d;if(db)try{await db.collection('entries').doc(id).set(d)}catch(e){toast('Sem permissão para salvar');return}else try{localStorage.setItem('E',JSON.stringify(E))}catch(e){}renderAll()}
+async function saveCfg(o){CFG={...CFG,...o};if(db)try{await db.doc('cfg/main').set(CFG)}catch(e){toast('Sem permissão para salvar')}else try{localStorage.setItem('C',JSON.stringify(CFG))}catch(e){}renderAll(1)}
+$('#dt').value=date;$('#dt').onchange=e=>{if(e.target.value){date=e.target.value;renderAll(1)}};
+renderAll(1);
+(async()=>{
+ let t=setTimeout(()=>{if(!db)local()},10000);
+ try{db=window.claude&&await claude.use('db')}catch(e){db=null}
+ clearTimeout(t);if(!db)return local();
+ $('#st').textContent='● ao vivo · salvo na nuvem';
+ db.collection('entries').onSnapshot(s=>{E={};s.docs.forEach(d=>E[d.id]=d.data());renderAll()},()=>local());
+ db.doc('cfg/main').onSnapshot(s=>{CFG=s.data()||{};renderAll(1)});
+})();
+function local(){E=LS('E')||{};CFG=LS('C')||{};$('#st').textContent='modo local (só neste navegador)';$('#st').classList.add('off');renderAll(1)}
+</script>
+</body>
+</html>
